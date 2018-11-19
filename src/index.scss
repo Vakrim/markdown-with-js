@@ -1,0 +1,36 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', monospace;
+  background: #372963;
+  color: #c592ff;
+  font-size: 13px;
+}
+
+input,
+textarea {
+  font-family: 'Fira Code', monospace;
+  background: #372963;
+  color: #c592ff;
+  outline-color: #00ff9c;
+  border-radius: 4px;
+  resize: none;
+  width: 100%;
+  padding: 3px;
+  border: transparent 1px solid;
+
+  &:hover {
+    border: #00ff9c 1px solid;
+    transition: 0.3s border;
+  }
+}
+
+button {
+  font-family: 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
