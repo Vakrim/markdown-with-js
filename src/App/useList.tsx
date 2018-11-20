@@ -1,6 +1,10 @@
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import { Variable } from './VariableEditor';
 import useLocalStorage from './useLocalStorage';
+
+function safeParseNumber(value: string): number | string {
+  return /^\d+(\.\d+)?$/.test(value) ? parseFloat(value) : value;
+}
 
 export function useList(
   key: string
@@ -30,7 +34,7 @@ export function useList(
         item.id === id
           ? {
               ...item,
-              value,
+              value: safeParseNumber(value),
             }
           : item
       );
